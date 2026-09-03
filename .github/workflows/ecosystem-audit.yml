@@ -2,6 +2,13 @@ name: Ecosystem audit
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/ecosystem-audit.yml'
+      - 'scripts/audit-ecosystem.ps1'
+      - 'README.md'
+      - 'START_HERE.md'
+      - 'REPOSITORY_MAP.md'
   schedule:
     - cron: '15 7 * * *'
   push:
@@ -33,4 +40,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./scripts/audit-ecosystem.ps1 -Mode Remote
-
