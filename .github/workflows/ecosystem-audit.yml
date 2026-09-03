@@ -1,0 +1,42 @@
+name: Ecosystem audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/ecosystem-audit.yml'
+      - 'scripts/audit-ecosystem.ps1'
+      - 'README.md'
+      - 'START_HERE.md'
+      - 'REPOSITORY_MAP.md'
+  schedule:
+    - cron: '15 7 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/ecosystem-audit.yml'
+      - 'scripts/audit-ecosystem.ps1'
+      - 'README.md'
+      - 'START_HERE.md'
+      - 'REPOSITORY_MAP.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ecosystem-audit
+  cancel-in-progress: true
+
+jobs:
+  audit-public-ecosystem:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out ecosystem governance
+        uses: actions/checkout@v6
+
+      - name: Audit public repositories and production
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./scripts/audit-ecosystem.ps1 -Mode Remote
