@@ -7,7 +7,7 @@ Choose the destination that matches what you need.
 | Product user or evaluator | [Open the live AgriPartners Alpha](https://agripartners.vercel.app/#home) |
 | Developer or technical reviewer | [Product source and technical documentation](https://github.com/farabek/agripartners) |
 | Funder, grant reviewer, or investor reviewing project materials | [Development Round Funding Package](https://github.com/farabek/agripartners-funding-package) |
-| Anyone who wants a simple explanation of the USD 40,000 budget | [Plain-language budget guide](https://github.com/farabek/agripartners-funding-package/blob/main/guides/BUDGET_EXPLAINED.md) · [Русская версия](https://github.com/farabek/agripartners-funding-package/blob/main/guides/BUDGET_EXPLAINED_RU.md) |
+| Anyone who wants a simple explanation of the USD 40,000 budget | Budget explained: [English](https://github.com/farabek/agripartners-funding-package/blob/main/guides/BUDGET_EXPLAINED.md) · [Русский](https://github.com/farabek/agripartners-funding-package/blob/main/guides/BUDGET_EXPLAINED_RU.md) |
 | Auditor or contributor checking repository ownership | [Repository map](REPOSITORY_MAP.md) |
 | Security researcher | [Security policy](SECURITY.md) |
 | Team member working with CRM, outreach, or internal decisions | Private `farabek/agripartners-hq` repository (access required) |
