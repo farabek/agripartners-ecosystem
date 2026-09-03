@@ -56,9 +56,13 @@ function New-HttpClient {
     $client = [System.Net.Http.HttpClient]::new()
     $client.DefaultRequestHeaders.UserAgent.ParseAdd('AgriPartners-Ecosystem-Audit/1.0')
     $client.Timeout = [TimeSpan]::FromSeconds(30)
-    if ($env:GITHUB_TOKEN) {
+    $githubToken = $env:GITHUB_TOKEN
+    if (-not $githubToken -and (Get-Command gh -ErrorAction SilentlyContinue)) {
+        $githubToken = (& gh auth token 2>$null | Out-String).Trim()
+    }
+    if ($githubToken) {
         $client.DefaultRequestHeaders.Authorization =
-            [System.Net.Http.Headers.AuthenticationHeaderValue]::new('Bearer', $env:GITHUB_TOKEN)
+            [System.Net.Http.Headers.AuthenticationHeaderValue]::new('Bearer', $githubToken)
     }
     return $client
 }
