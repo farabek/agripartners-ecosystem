@@ -17,6 +17,7 @@ a separate NEAR Edu-Arbitrage project.
 
 ## Start here
 
+- [Choose where to go by role or task](START_HERE.md)
 - [Repository map](REPOSITORY_MAP.md)
 - [Governance](GOVERNANCE.md)
 - [Architecture](ARCHITECTURE.md)
