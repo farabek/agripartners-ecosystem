@@ -109,7 +109,11 @@ function Test-KeyUrls {
         'https://github.com/farabek/agripartners-funding-package/blob/main/guides/BUDGET_EXPLAINED.md',
         'https://github.com/farabek/agripartners-funding-package/blob/main/guides/BUDGET_EXPLAINED_RU.md',
         'https://github.com/farabek/agripartners-funding-package/blob/main/guides/CORPORATE_SETUP_BUDGET.md',
-        'https://github.com/farabek/agripartners-funding-package/blob/main/guides/CORPORATE_SETUP_BUDGET_RU.md'
+        'https://github.com/farabek/agripartners-funding-package/blob/main/guides/CORPORATE_SETUP_BUDGET_RU.md',
+        'https://github.com/farabek/agripartners-funding-package/blob/main/guides/FEEDLOT_PILOT_EXPLAINED.md',
+        'https://github.com/farabek/agripartners-funding-package/blob/main/guides/FEEDLOT_PILOT_EXPLAINED_RU.md',
+        'https://github.com/farabek/agripartners-funding-package/blob/main/guides/HISSAR_PILOT_EXPLAINED.md',
+        'https://github.com/farabek/agripartners-funding-package/blob/main/guides/HISSAR_PILOT_EXPLAINED_RU.md'
     )
 
     foreach ($url in $urls) {
@@ -181,6 +185,10 @@ function Test-RemoteNavigationContent {
         @{ Repo = 'farabek/agripartners-funding-package'; Path = 'README.md'; Pattern = 'agripartners-ecosystem/blob/main/START_HERE.md'; Label = 'Funding README links to Start Here' },
         @{ Repo = 'farabek/agripartners-funding-package'; Path = 'README.md'; Pattern = 'guides/BUDGET_EXPLAINED.md'; Label = 'Funding README links to the plain-language budget' },
         @{ Repo = 'farabek/agripartners-funding-package'; Path = 'README.md'; Pattern = 'guides/CORPORATE_SETUP_BUDGET.md'; Label = 'Funding README links to the Corporate Setup budget' },
+        @{ Repo = 'farabek/agripartners-funding-package'; Path = 'README.md'; Pattern = 'guides/FEEDLOT_PILOT_EXPLAINED.md'; Label = 'Funding README links to the Feedlot Pilot guide' },
+        @{ Repo = 'farabek/agripartners-funding-package'; Path = 'README.md'; Pattern = 'guides/HISSAR_PILOT_EXPLAINED.md'; Label = 'Funding README links to the Hissar Pilot guide' },
+        @{ Repo = 'farabek/agripartners'; Path = 'README.md'; Pattern = 'guides/FEEDLOT_PILOT_EXPLAINED.md'; Label = 'Product README links to the Feedlot Pilot guide' },
+        @{ Repo = 'farabek/agripartners'; Path = 'README.md'; Pattern = 'guides/HISSAR_PILOT_EXPLAINED.md'; Label = 'Product README links to the Hissar Pilot guide' },
         @{ Repo = 'farabek/agripartners-ecosystem'; Path = 'START_HERE.md'; Pattern = 'farabek/agripartners-funding-package'; Label = 'Start Here routes funding users' }
     )
 
