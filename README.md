@@ -23,6 +23,20 @@ a separate NEAR Edu-Arbitrage project.
 - [Architecture](ARCHITECTURE.md)
 - [Security policy](SECURITY.md)
 
+## Consistency audit
+
+Run the complete local audit from this repository:
+
+```powershell
+.\scripts\audit-ecosystem.ps1 -Mode Local
+```
+
+It verifies all four canonical local clones, their remotes and clean `main`
+branches, repository ownership markers, public GitHub state, production commit,
+navigation links, and forbidden private/secret paths. The scheduled
+[Ecosystem audit workflow](.github/workflows/ecosystem-audit.yml) checks the
+public repositories and Vercel every day; private HQ remains a local-only check
+unless a dedicated read-only secret is explicitly configured.
+
 This repository intentionally contains no credentials, personal contact data,
 private CRM records, outreach pipelines, or duplicated product/funding content.
-

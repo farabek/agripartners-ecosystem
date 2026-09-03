@@ -27,3 +27,7 @@ Before completing a cross-repository change:
 4. Run the tests and checks owned by each changed repository.
 5. Confirm production build metadata when product deployment is affected.
 
+The canonical automated check is
+[`scripts/audit-ecosystem.ps1`](scripts/audit-ecosystem.ps1). Run it locally
+after cross-repository changes. Its public CI mode runs daily and must remain
+free of credentials or private-repository dependencies.
